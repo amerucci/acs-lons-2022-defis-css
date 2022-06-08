@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defi CSS 02 - Animation [Loader]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <style>
+       .contain {position: absolute; top:50%; left:50%; transform:translate(-50%, -50%); display:flex}
+    .dot{width:25px; height:25px; background:#000; margin:0 10px; border-radius:50%}
+
+    @keyframes jump {
+        100%{transform:translateY(-40px);}
+        
+    }
+    .dot1{animation: jump infinite .25s alternate }
+    .dot2{animation: jump infinite .25s 0.05s alternate }
+    .dot3{animation: jump infinite .25s 0.1s alternate }
+    </style>
+
+
+<div class="contain">
+  <div class="dot dot1"></div>
+  <div class="dot dot2"></div>
+  <div class="dot dot3"></div>
+</div>
+
+</body>
+
+</html>
